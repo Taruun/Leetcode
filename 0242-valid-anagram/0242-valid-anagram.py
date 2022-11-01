@@ -9,15 +9,12 @@ class Solution:
         
         firstArrayCount = {}
         secondArrayCount = {}
-        
         for idx in range(len(firstArray)):
             firstArrayCount[firstArray[idx]] = 1 + firstArrayCount.get(firstArray[idx], 0)
-            secondArrayCount[secondArray[idx]] = 1 +secondArrayCount.get(secondArray[idx],0)
-        for character in firstArrayCount:
-            if firstArrayCount[character] != secondArrayCount.get(character, 0):
-                return False
+            secondArrayCount[secondArray[idx]] = 1 + secondArrayCount.get(secondArray[idx], 0)
             
-        return True
+        return firstArrayCount == secondArrayCount
+        
             
             
             
